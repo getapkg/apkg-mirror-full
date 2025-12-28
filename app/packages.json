@@ -1,12 +1,12 @@
 {
   "packages": {
-    "hyprdots-arch": {
+    "test-pkg": {
       "OS": [
         "linux"
       ],
-      "file": "hyprdots-arch.zip",
-      "maintainer_email": "pfla@pfla.local",
-      "maintainer_name": "PFLA"
+      "file": "test.zip",
+      "maintainer_email": "test@test.local",
+      "maintainer_name": "testpkgmaint"
     }
   }
 }
