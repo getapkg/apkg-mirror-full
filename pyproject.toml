@@ -1,0 +1,10 @@
+[project]
+name = "getAPKG-Mirror"
+version = "0.1.0"
+description = "Mirror for the aPKG package manager(lightweight)"
+requires-python = ">=3.13"
+dependencies = [
+    "flask>=3.1.2",
+    "colorama",
+    "requests",
+]

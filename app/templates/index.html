@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>getAPKG Packages</title>
+</head>
+<body>
+<h1>getAPKG Packages</h1>
+
+<form method="get">
+    <input type="text" name="q" placeholder="Search packages..." value="{{ query|default('') }}">
+    <input type="submit" value="Search">
+</form>
+
+<table border="1" cellpadding="4" cellspacing="0">
+<tr>
+    <th>Package</th>
+    <th>OS</th>
+    <th>Maintainer</th>
+    <th>Description</th>
+    <th>Download</th>
+</tr>
+{% for name, info in packages.items() %}
+{% if not query or query.lower() in name.lower() %}
+<tr>
+    <td>{{ name }}</td>
+    <td>{{ info['OS'] | join(', ') }}</td>
+    <td>{{ info['maintainer_name'] }} ({{ info['maintainer_email'] }})</td>
+    <td>{{ info.get('description','') }}</td>
+    <td><a href="/releases/0.1/{{ info['file'] }}">Download</a></td>
+</tr>
+{% endif %}
+{% endfor %}
+</table>
+
+</body>
+</html>

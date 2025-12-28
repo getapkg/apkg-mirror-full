@@ -1,0 +1,13 @@
+{
+  "packages": {
+    "hyprdots-arch": {
+      "OS": [
+        "linux"
+      ],
+      "file": "hyprdots-arch.zip",
+      "maintainer_email": "pfla@pfla.local",
+      "maintainer_name": "PFLA"
+    }
+  }
+}
+

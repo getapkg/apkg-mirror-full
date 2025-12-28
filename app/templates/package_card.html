@@ -1,0 +1,9 @@
+<div class="package">
+    <h2>{{ name }}</h2>
+    <p><strong>Supported OS:</strong> {{ info['OS'] | join(', ') }}</p>
+    <p><strong>Maintainer:</strong> {{ info['maintainer_name'] }} ({{ info['maintainer_email'] }})</p>
+    {% if info.get('description') %}
+    <p><strong>Description:</strong> {{ info['description'] }}</p>
+    {% endif %}
+    <a class="download" href="/releases/0.1/{{ info['file'] }}">Download</a>
+</div>
